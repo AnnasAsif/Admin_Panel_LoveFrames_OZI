@@ -1,0 +1,62 @@
+/* styles.css */
+
+/* Navbar styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form styles */
+  form {
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 80%; /* Adjust the width as needed */
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  input[type='text'],
+  input[type='password'],
+  button {
+    display: block;
+    margin: 10px auto; /* Center the input fields and button */
+    width: calc(100% - 20px); /* Adjust the width to leave some space from sides */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
