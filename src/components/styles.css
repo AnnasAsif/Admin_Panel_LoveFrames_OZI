@@ -60,3 +60,17 @@ nav {
     text-align: center;
   }
   
+  .imgShow {
+    max-width: 120px;
+    margin: 15px;
+    border: solid 1px;
+  }
+  .imgShow img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .imgShow:hover{
+    opacity: 0.7 ;
+    transform: scale(1.1);
+  }
