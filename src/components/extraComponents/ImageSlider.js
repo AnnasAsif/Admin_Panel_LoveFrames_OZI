@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './sliderstyle.css';
 
 const ImageSlider = ({ imageArray, intervalTime }) => {
-    console.log('+++++++++>>>>>>', imageArray);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -23,10 +22,10 @@ const ImageSlider = ({ imageArray, intervalTime }) => {
           <div className="slider-bar">
             <img src={imageArray[currentImageIndex].icon} alt="Icon" className="icon" />
             <span className="text">
-                <p style={{textAlign:'left', marginBottom:0, marginTop:0, fontWeight:'bold', fontSize:18}}>
+                <p style={{textAlign:'left', marginBottom:0, marginTop:0, fontWeight:'bold', fontSize:24}}>
                 {imageArray[currentImageIndex].name}
                 </p>
-                <p style={{textAlign:'left', marginTop:0, fontSize:12}}>
+                <p style={{textAlign:'left', marginTop:0, fontSize:14}}>
                 {imageArray[currentImageIndex].description}
                 </p>
             </span>

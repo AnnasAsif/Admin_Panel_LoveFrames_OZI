@@ -10,7 +10,7 @@ const Home = () => {
     
     useEffect(() => {
         const loaddata = async () => {
-          var api = "http://161.97.164.28:8080/api/frames/gettopframes";
+          var api = "http://161.97.164.28:8080/api/frames/gettopframes?versionCode=29";
     
           try {
             const response = await fetch(api);
