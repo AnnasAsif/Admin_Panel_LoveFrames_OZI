@@ -17,8 +17,8 @@ const Home = () => {
             if (response.ok) {
               const receivedData = await response.json();
               setData(receivedData);
-              console.log('Recieved======>', receivedData);
-              console.log('======>', data);
+              // console.log('Received======>', receivedData);
+              // console.log('======>', data);
               if(data){
                   setDataCheck(true)
 

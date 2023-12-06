@@ -1,15 +1,31 @@
 import React from 'react'
 import './card.css'
+import {useNavigate, Link} from 'react-router-dom'
 
 function Category(props) {
+    const navigate = useNavigate();
+
+  const handleClick = () => {
+    const specificId = props.id; // Replace with your specific ID
+    navigate(`/frames/${specificId}`);
+  };
+
+    console.log(props.id);
     return (
         
         <span className="card">
-          <img src={props.image} alt="Avatar" style={{width:'100%'}}/>
-          <span className="container">
-            <p style={{marginTop:5, marginBottom:5}}>{props.name}</p>
-          </span>
-          <input type='submit' value='Show Data' onClick={()=>{props.onClick()}}/>
+            <img 
+                className="img" 
+                src={props.image} 
+                alt="Avatar" 
+                style={{width:props.width}} 
+                onClick={()=>{
+                    // handleClick()
+                }}
+            />
+            <Link to={`/frames/${props.id}`}>{props.name}</Link>
+            <p style={{fontWeight:'bold',marginTop:5, marginBottom:5}}>{props.name}</p>
+          
         </span>
             
     );

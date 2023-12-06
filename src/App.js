@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import AdminLogin from './components/AdminLogin';
 import Register from './components/Register';
+import Frames from './components/display/Frames'
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home/>} />
+          <Route path="/frames/:id" component={<Frames/>} />
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css'; // Import the CSS file
+import {useParams} from 'react-router-dom'
 
 const Register = () => {
   const [newUsername, setNewUsername] = useState('');
@@ -10,7 +11,10 @@ const Register = () => {
     // Your registration logic here using 'newUsername' and 'newPassword' state values
   };
 
+  const id = useParams(); // Access the 'id' parameter from the URL
+  console.log('>>>>>>>>>>>>>>>',id);
   return (
+    
     <div>
       <h1>Register Page</h1>
       <form onSubmit={handleRegistration}>
