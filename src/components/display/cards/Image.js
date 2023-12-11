@@ -5,7 +5,11 @@ function Image(props) {
     return (
         
         <span className="card">
-          <img src={props.image} alt="Avatar" style={{width:'100%'}}/>
+          <img 
+            src={props.image} 
+            alt="Avatar" 
+            style={{width:props.width}}
+          />
         </span>
             
     );

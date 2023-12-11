@@ -7,10 +7,10 @@ function Category(props) {
 
   const handleClick = () => {
     const specificId = props.id; // Replace with your specific ID
-    navigate(`/frames/${specificId}`);
+    navigate(`/frames?id=${specificId}`);
   };
 
-    console.log(props.id);
+    // console.log(props.id);
     return (
         
         <span className="card">
@@ -20,10 +20,11 @@ function Category(props) {
                 alt="Avatar" 
                 style={{width:props.width}} 
                 onClick={()=>{
-                    // handleClick()
+                    handleClick()
                 }}
             />
-            <Link to={`/frames/${props.id}`}>{props.name}</Link>
+            {/* <Link to={{ pathname: '/frames'}}>{props.name}</Link> */}
+
             <p style={{fontWeight:'bold',marginTop:5, marginBottom:5}}>{props.name}</p>
           
         </span>

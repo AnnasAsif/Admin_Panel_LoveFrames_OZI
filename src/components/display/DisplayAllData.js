@@ -89,6 +89,7 @@ const DisplayAllData = (props) => {
                             <span style={{width:'10%', margin:10}}>
                                 <Image
                                     image={result.thumbnail}
+                                    width='100px'
                                 />
                                 
 

@@ -33,7 +33,11 @@ const App = () => {
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home/>} />
-          <Route path="/frames/:id" component={<Frames/>} />
+          <Route
+            path="/frames" element={<Frames/>}
+          />
+
+
         </Routes>
       </div>
     </Router>
