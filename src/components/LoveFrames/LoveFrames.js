@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './styles.css'; // Import the CSS file
+import './../styles.css'; // Import the CSS file
 
-import DisplayAllData from './display/DisplayAllData';
+import DisplayLoveData from './DisplayLoveData';
+import LoadingAnimation from './../Animations/LoadingAnimation';
 
-
-const Home = () => {
+const LoveFrames = () => {
+    const [isLoading, setIsLoading] = useState(true)
     const [datacheck, setDataCheck] = useState(false)
     const [data, setData] = useState({});
     
@@ -20,6 +21,7 @@ const Home = () => {
               // console.log('Received======>', receivedData);
               // console.log('======>', data);
               if(data){
+                  setIsLoading(false)
                   setDataCheck(true)
 
               }
@@ -39,10 +41,19 @@ const Home = () => {
     
   return (
     <div>
-      {/* <h1>Home Page</h1> */}
+      {/* <h1>LoveFrames Page</h1> */}
+      {
+        isLoading && 
+        <>
+          <br/><br/><br/><br/>
+          <br/><br/><br/><br/>
+          <br/><br/><br/><br/>
+          <LoadingAnimation/>
+        </>
+      }
       {
         datacheck && (
-            <DisplayAllData
+            <DisplayLoveData
               data={data}
             />
 
@@ -53,4 +64,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default LoveFrames;

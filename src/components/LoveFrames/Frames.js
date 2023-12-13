@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 // import './styles.css'; // Import the CSS file
 
 import { useLocation } from 'react-router-dom';
-import Image from './cards/Image';
+import Image from '../display/cards/Image';
 
 
 
@@ -19,7 +19,7 @@ const Frames = () => {
     useEffect(() => {
         const loaddata = async () => {
           console.log('========================',id);
-          var api = `http://161.97.164.28:8080/api/frames/loadCategoryData?categoryId=${id}`;
+          var api = `http://161.97.164.28:9010/api/frames/loadCategoryData?categoryId=${id}`;
     
           try {
             const response = await fetch(api);

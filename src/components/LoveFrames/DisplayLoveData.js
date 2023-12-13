@@ -1,12 +1,23 @@
 import React from 'react';
 import './../styles.css'; // Import the CSS file
+import {useNavigate} from 'react-router-dom'
 
 import ImageSlider from '../extraComponents/ImageSlider';
-import Category from './cards/Category';
-import Image from './cards/Image';
-import FrameList from './cards/FrameList';
+import Category from '../display/cards/Category';
+import Image from '../display/cards/Image';
+import FrameList from '../display/cards/FrameList';
 
-const DisplayAllData = (props) => {
+const DisplayLoveData = (props) => {
+    const navigate = useNavigate();
+
+  const categoryhandleClick = (id) => {
+    // const specificId = props.id; // Replace with your specific ID
+    navigate(`/frames?id=${id}`);
+  };
+  const effectshandleClick = (id) => {
+    // const specificId = props.id; // Replace with your specific ID
+    navigate(`/effects?id=${id}`);
+  };
   return (
     <div>
       
@@ -23,14 +34,14 @@ const DisplayAllData = (props) => {
         }
       </div>
     )}
-      {props.data.categories && (
+      {props.data.latest && (
       <div>
         {
             <div style={{textAlign:'center',borderBottom:'solid 1px black'}}>
-                <h4><u>{props.data.categories.title}</u></h4>
+                <h4><u>Categories</u></h4>
                 <div style={{display: 'flex', overflowX: 'auto', width: '98.7vw' }}>
                     {
-                        props.data.categories.content.map(result=>(
+                        props.data.latest.content.map(result=>(
                             
                             <> 
                                 <span style={{margin:'5px'}}>
@@ -39,6 +50,7 @@ const DisplayAllData = (props) => {
                                         name={result.name}
                                         id={result._id}
                                         width='250px'
+                                        handleClick ={categoryhandleClick}
                                     />
                                 </span>                
                             </>
@@ -59,13 +71,15 @@ const DisplayAllData = (props) => {
                 <div style={{display: 'flex', overflowX: 'auto', width: '98.7vw' }}>
                     {
                         props.data.effects.content.map(result=>(
-                            
+                            result._id !== '6490315ac43ee0b83e3a1447' &&
                             <> 
                                 <span style={{margin:'10px'}}>
                                     <Category
                                         image={result.image}
                                         name={result.name}
+                                        id={result._id}
                                         width='420px'
+                                        handleClick={effectshandleClick}
                                     />
                                 </span>                
                             </>
@@ -163,4 +177,4 @@ const DisplayAllData = (props) => {
   );
 };
 
-export default DisplayAllData;
+export default DisplayLoveData;
