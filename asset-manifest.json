@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Admin_Panel_OZI/static/css/main.e59c1804.css",
+    "main.js": "/Admin_Panel_OZI/static/js/main.3dc56382.js",
+    "static/js/787.bf69f561.chunk.js": "/Admin_Panel_OZI/static/js/787.bf69f561.chunk.js",
+    "index.html": "/Admin_Panel_OZI/index.html",
+    "main.e59c1804.css.map": "/Admin_Panel_OZI/static/css/main.e59c1804.css.map",
+    "main.3dc56382.js.map": "/Admin_Panel_OZI/static/js/main.3dc56382.js.map",
+    "787.bf69f561.chunk.js.map": "/Admin_Panel_OZI/static/js/787.bf69f561.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e59c1804.css",
+    "static/js/main.3dc56382.js"
+  ]
+}
