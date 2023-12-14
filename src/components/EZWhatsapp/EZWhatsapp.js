@@ -15,7 +15,7 @@ const EZWhatsapp = () => {
             const receivedData = await response.json();
             if(receivedData.data.length>0){
                 setCategoryData(receivedData.data);
-                // console.log(categoryData);
+                console.log(categoryData);
             }
 
           } else {
