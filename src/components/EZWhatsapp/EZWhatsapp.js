@@ -30,7 +30,8 @@ const EZWhatsapp = () => {
   // Simulating category data
   useEffect(() => {
     const loaddata = async () => {
-        var api = "http://161.97.164.28:9007/api/ezwhatsapp/gettags";
+      // /api/frames/gettopframes?versionCode=29
+        var api = "https://161.97.164.28:9009/api/ezwhatsappTags";
   
         try {
           const response = await fetch(api);
