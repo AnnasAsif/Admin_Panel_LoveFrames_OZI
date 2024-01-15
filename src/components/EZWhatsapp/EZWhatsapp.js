@@ -6,32 +6,28 @@ const EZWhatsapp = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [categoryData, setCategoryData] = useState([]);
 
-  const loadallvideos=async (tag)=>{
-    var api = `http://161.97.164.28:9007/api/ezwhatsapp/getData?tag=${tag}`;
-  
-        try {
-          const response = await fetch(api);
-          if (response.ok) {
-            const receivedData = await response.json();
-            if(receivedData.data.length>0){
-                setCategoryData(receivedData.data);
-                console.log(categoryData);
-            }
-
-          } else {
-            throw new Error('Network response was not ok.');
-          }
-        } catch (error) {
-          console.error('There was a problem fetching the data:', error);
-          // Handle error state or retry mechanism if needed
+  const loadallvideos = async (tag) => {
+    try {
+      const api = `http://161.97.164.28:9007/api/ezwhatsapp/getData?tag=${tag}`;
+      const response = await fetch(api);
+      if (response.ok) {
+        const receivedData = await response.json();
+        if (receivedData.data.length > 0) {
+          setCategoryData(receivedData.data);
         }
-  }
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    } catch (error) {
+      console.error('There was a problem fetching the data:', error);
+      // Handle error state or retry mechanism if needed
+    }
+  };
 
   // Simulating category data
   useEffect(() => {
     const loaddata = async () => {
-      // /api/frames/gettopframes?versionCode=29
-        var api = "https://161.97.164.28:9009/api/ezwhatsappTags";
+        var api = "http://161.97.164.28:9009/ezwhatsappTags";
   
         try {
           const response = await fetch(api);
@@ -62,6 +58,13 @@ const EZWhatsapp = () => {
       loadallvideos(selectedCategory)
 
   }, [selectedCategory]);
+  useEffect(() => {
+    // Simulating fetching data based on selected category\
+    
+  
+      console.log('Category Data: ============>',categoryData)
+
+  }, [categoryData]);
 
   const handleCategoryClick = (category) => {
     console.log(category);

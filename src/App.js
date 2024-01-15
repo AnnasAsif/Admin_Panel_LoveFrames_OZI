@@ -16,7 +16,7 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/Admin_Panel_OZI">Home</Link>
             </li>
             <li>
               <Link to="/loveframes">Love_Frames</Link>
@@ -34,7 +34,7 @@ const App = () => {
         </nav>
 
         <Routes>
-          <Route path="/" element={<>HOME</>} />
+          <Route path="/Admin_Panel_OZI" element={<>HOME</>} />
 
           <Route path="/loveframes" element={<LoveFrames/>} />
           <Route path="/ezwhatsapp" element={<EZWhatsapp />} />
