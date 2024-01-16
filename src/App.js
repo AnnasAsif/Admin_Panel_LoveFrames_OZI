@@ -38,10 +38,6 @@ const App = () => {
 
           <Route path="/loveframes" element={<LoveFrames/>} />
           <Route path="/ezwhatsapp" element={<EZWhatsapp />} />
-
-          {/* <Route path="/admin" element={<AdminLogin />} />
-          <Route path="/register" element={<Register />} /> */}
-
           <Route path="/frames" element={<Frames/>}/>
           <Route path="/effects" element={<Effects/>}/>
 
